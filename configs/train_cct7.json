@@ -1,0 +1,39 @@
+{
+    "training": {
+        "epochs": 300,
+        "grad_accum": 8,
+        "grad_clip": 0,
+        "loss": "lsce"
+    },
+    "model": {
+        "weight_name": "classifier.fc",
+        "name":"cct7"
+    },
+    "checkpoint": {
+        "checkpoint_path": "",
+        "n_checkpoint": 1
+    },
+    "diffusion": {
+        "dropout": 0.2,
+        "diffusion_num_steps": 1000,
+        "diffusion_num_steps_eval": 10,
+        "nch": 64   ,
+        "out_ch": 1,
+        "ch_mult": [1,2,2,4],
+        "dim_in": 100,
+        "dim_lat_out": 256,
+        "dim_output": 100,
+        "scale":{
+            "ch": 32,
+            "in_dim": 100,
+            "out_dim": 256
+        }
+
+    },
+    "overfitting": {
+        "lr_overfitting": 5e-3,
+        "n_overfitting": 10
+    }
+
+}
+
